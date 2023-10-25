@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     // Path to the login component
-    path: 'login',
+    path: '',
     // The component to load when the path is navigated to
     component: LoginComponent,
   },
