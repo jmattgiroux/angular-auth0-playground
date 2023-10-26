@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AuthModule.forRoot({
       domain: 'development-playground.us.auth0.com',
-      clientId: 'yZ0gEhejrVPJSxjYCpdn99Or4fj38Oe0',
+      clientId: 'EBviEdZguoZOL7j8K6e9u1kxYoK05bR3',
       authorizationParams: {
         redirect_uri: window.location.origin,
       },
