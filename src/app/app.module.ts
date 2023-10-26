@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
       authorizationParams: {
         redirect_uri: window.location.origin,
         audience: 'https://people-service-epsilon.com',
+        scope: 'openid profile offline_access',
       },
     }),
     AppRoutingModule,
