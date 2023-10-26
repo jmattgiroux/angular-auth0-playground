@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
       clientId: 'EBviEdZguoZOL7j8K6e9u1kxYoK05bR3',
       authorizationParams: {
         redirect_uri: window.location.origin,
+        audience: 'https://people-service-epsilon.com',
       },
     }),
     AppRoutingModule,
