@@ -9,5 +9,10 @@ export class AppService {
     return 'Hello World!';
   }
 
+  async getUsers(req, res) {
+      const result = await this.managementClient.users.getAll();
+      res.json({ message: result });
+  }
+
   constructor(private managementClient: ManagementClient) {}
 }

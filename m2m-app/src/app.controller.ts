@@ -9,6 +9,11 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('/get-users')
+  getUsers(req, res) {
+    return this.appService.getUsers(req, res);
+  }
 }
 
 /**
