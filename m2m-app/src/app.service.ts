@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ManagementClient } from 'auth0';
+import {ConfigService} from "@nestjs/config";
 
 
 @Injectable()
@@ -8,11 +9,12 @@ export class AppService {
     return 'Hello World!';
   }
 
-  constructor(private  managementClient: ManagementClient) {
-    this.managementClient = new ManagementClient({
-      domain: process.env.DOMAIN,
-      clientId: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENT_SECRET
-    });
+  constructor(private config: ConfigService) {
+    const domain = process.env.DOMAIN;
+    // this.managementClient = new ManagementClient({
+    //   domain: domain,
+    //   clientId: process.env.CLIENT_ID,
+    //   clientSecret: process.env.CLIENT_SECRET
+    // });
   }
 }
