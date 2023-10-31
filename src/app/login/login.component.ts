@@ -84,4 +84,25 @@ export class LoginComponent implements OnInit {
       },
     );
   }
+
+  getUsers() {
+    console.log('Trying to get users,', this.token);
+    const headers: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${this.token}`,
+    });
+
+    const options = {
+      headers: headers,
+    };
+
+    this.http.get('http://localhost:8080/get-users', options).subscribe(
+      (result) => {
+        console.log(result);
+      },
+      (error) => {
+        console.error(error);
+      },
+    );
+  }
 }
